@@ -14,234 +14,324 @@
 </head>
 <body class="bg-[#f5fff6] min-h-screen roboto-font">
     <nav class=" bg-white">
-        <div class="flex justify-between items-center p-4 mx-28">
+        <div class="flex justify-between items-center p-2 mx-6 lg:p-4 lg:mx-28">
             <div class="flex items-center gap-2">
-                <img src="./assets/logo.png" alt="" class="w-10 h-10">
-                <h1 class="font-extrabold text-green-900">Emergency <br> Service</h1>
+                <img src="./assets/logo.png" alt="" class="w-8 h-8 md:w-14 md:h-14">
+                <h1 class="font-extrabold text-xs md:text-2xl text-green-900">Emergency <br> Service</h1>
             </div>
 
             <div class="flex items-center gap-6">
-                <div class="flex items-center gap-3 bg-[#41ff6b1a] px-8 py-2 rounded-3xl">
-                    <h3>0</h3>
+                <div class="flex items-center md:gap-3 bg-[#41ff6b1a] p-1 rounded-xl md:px-8 md:py-2 md:rounded-3xl">
+                    <h3 id="heartCount">0</h3>
                     <img src="./assets/heart.png" alt="" class="w-6 h-6">
                 </div>
-                <div class="flex items-center gap-3 bg-[#41ff6b1a] px-8 py-2 rounded-3xl">
-                    <h3>100</h3>
+                <div class="flex items-center md:gap-3 bg-[#41ff6b1a] p-1 rounded-xl md:px-8 md:py-2 md:rounded-3xl">
+                    <h3 id="Coins">100</h3>
                     <img src="./assets/coin.png" alt="" class="w-6 h-6">
                 </div>
 
-                <button class="bg-[#00a63e] text-white px-8 py-2 rounded-3xl">0 <span>Copy</span></button>
+                <button class="bg-[#00a63e] text-white p-1 rounded-xl md:px-8 md:py-2 md:rounded-3xl"><span id="copyCount">0</span> Copy</button>
             </div>
         </div>
     </nav>
 
     <!-- hero section -->
      <section class="text-white py-10 flex flex-col justify-center items-center text-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] ">
-        <img src="./assets/logo.png" alt="" class="w-20 h-20 mx-auto mb-3">
-        <h1 class="font-extrabold text-3xl mb-2">Emergency Service Directory</h1>
-        <p class="">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+        <img src="./assets/logo.png" alt="" class="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3">
+        <h1 class="font-bold text-2xl mb-2 md:font-extrabold md:text-3xl">Emergency Service Directory</h1>
+        <p class="text-xs md:text-base">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
      </section>
 
         <!-- card section -->
 
-     <section class="grid grid-cols-4 grid-rows-3 gap-8 p-10 mx-28 bg-green-50">
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+     <section class="grid grid-cols-4 grid-rows-3 gap-8 p-10 mx-28">
+        <div class="card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/emergency.png" alt="" class="w-8 h-8 bg-red-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">National Emergency Number</h1>
+                <h1 class="callingHeader font-bold text-lg">National Emergency Number</h1>
                 <p class="text-sm text-gray-500">National Emergency</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">999</h1>
+                <h1 class="callingNumber font-bold text-xl">999</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">All</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
         </div>  
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+        <div class="card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/police.png" alt="" class="w-8 h-8 bg-blue-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">Police Helpine Number</h1>
+                <h1 class="callingHeader font-bold text-lg">Police Helpine Number</h1>
                 <p class="text-sm text-gray-500">Police Helpine</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">999</h1>
+                <h1 class="callingNumber font-bold text-xl">999</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">Police</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
         </div>  
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+        <div class="card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/fire-service.png" alt="" class="w-8 h-8 bg-red-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">Fire Service Number</h1>
+                <h1 class="callingHeader font-bold text-lg">Fire Service Number</h1>
                 <p class="text-sm text-gray-500">Fire Service</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">999</h1>
+                <h1 class="callingNumber font-bold text-xl">999</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">Fire</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
         </div>  
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+        <div class="card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/ambulance.png" alt="" class="w-8 h-8 bg-red-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">Ambulance Service Number</h1>
+                <h1 class="callingHeader font-bold text-lg">Ambulance Service Number</h1>
                 <p class="text-sm text-gray-500">Ambulance Service</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">1994-999999</h1>
+                <h1 class="callingNumber font-bold text-xl">1994-999999</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">Health</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
         </div>  
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+        <div class="card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/emergency.png" alt="" class="w-8 h-8 bg-red-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">Women & Child Helpine</h1>
+                <h1 class="callingHeader font-bold text-lg">Women & Child Helpine</h1>
                 <p class="text-sm text-gray-500">Women & Child Helpine</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">109</h1>
+                <h1 class="callingNumber font-bold text-xl">109</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">Help</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
         </div>  
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+        <div class="card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/emergency.png" alt="" class="w-8 h-8 bg-red-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">Anti Corruption Helpline</h1>
+                <h1 class="callingHeader font-bold text-lg">Anti Corruption Helpline</h1>
                 <p class="text-sm text-gray-500">Anti Corruption</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">106</h1>
+                <h1 class="callingNumber font-bold text-xl">106</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">Govt.</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
         </div>  
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+        <div class=" card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/emergency.png" alt="" class="w-8 h-8 bg-red-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">Electricity Helpline Number</h1>
+                <h1 class="callingHeader font-bold text-lg">Electricity Helpline Number</h1>
                 <p class="text-sm text-gray-500">Electricity Outrage</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">16216</h1>
+                <h1 class="callingNumber font-bold text-xl">16216</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">Electricity</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
         </div>  
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+        <div class="card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/emergency.png" alt="" class="w-8 h-8 bg-red-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">Brac Helpline Number</h1>
+                <h1 class="callingHeader font-bold text-lg">Brac Helpline Number</h1>
                 <p class="text-sm text-gray-500">Brac</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">16445</h1>
+                <h1 class="callingNumber font-bold text-xl">16445</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">NGO</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
         </div>  
-        <div class="bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
+        <div class="card bg-white shadow-lg rounded-xl p-6 h-72 flex flex-col justify-between">
             <div class="flex items-center justify-between">
                 <img src="./assets/emergency.png" alt="" class="w-8 h-8 bg-red-200 p-1 rounded">
-                <i class="fa-regular fa-heart"></i>
+                <i class="heart cursor-pointer fa-regular fa-heart"></i>
             </div>
             <div>
-                <h1 class="font-bold text-lg">Bangladesh Railway Helpline </h1>
+                <h1 class="callingHeader font-bold text-lg">Bangladesh Railway Helpline </h1>
                 <p class="text-sm text-gray-500">Bangladesh Railway</p>
             </div>
             <div>
-                <h1 class="font-bold text-xl">163</h1>
+                <h1 class="callingNumber font-bold text-xl">163</h1>
                 <span class="bg-gray-200 rounded-2xl text-xs px-3 py-1 inline-block">Travel</span>
             </div>
             <div class="flex gap-3">
-                <button class="border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="copyButtons border border-gray-400 px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-regular fa-copy"></i> Copy</button>
-                <button class="text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
+                <button class="callButton text-white bg-[#00a63e] px-3 py-1 w-1/2 rounded-xl flex items-center justify-center gap-1">
                     <i class="fa-solid fa-phone"></i> Call</button>
             </div> 
-        </div>  
-          
-        
-        
+        </div> 
         
 
-        
 
         <div class="col-start-4 row-start-1 row-span-3 h-full">
-             <div class="flex items-start justify-between bg-white shadow-xl px-6 py-5 rounded-lg h-full"> 
-                <h1><i class="fa-solid fa-clock-rotate-left"></i> Call History</h1>
-                <button class="text-white bg-[#00a63e] px-6 py-1 rounded-xl">Clear</button>
+
+            <div class="h-full bg-white shadow-xl px-6 py-5 rounded-l">
+                <div class="flex items-start justify-between g">
+                    <h1><i class="fa-solid fa-clock-rotate-left"></i> Call History</h1>
+                    <button id="clear" class="text-white bg-[#00a63e] px-6 py-1 rounded-xl cursor-pointer">Clear</button>
+                </div>
+                <hr class="my-3 text-gray-300">
+                <div id="callHistoryContainer">
+                    
+                </div>
             </div>
+
         </div>
 </section>
 
 
 
+<script>
+    let CallHistory = [];
+    
+    //     ### 4. Heart Icons
 
+    //  Clicking on the 💗 **heart icon** of any card will increase the count in the Navbar
+    
+    let hearts = document.querySelectorAll('.heart');
+    for(let heart of hearts){
+        heart.addEventListener('click', function(){
+            let HeartCount = parseInt(document.getElementById('heartCount').innerText);
+                let newHeartCount = HeartCount + 1;
+                document.getElementById('heartCount').innerText = newHeartCount;
+        })
+    }
+
+    let CopyButtons = document.querySelectorAll('.copyButtons');
+    for(let CopyButton of CopyButtons){
+        CopyButton.addEventListener('click', async function(){
+            let copyCountContainer = parseInt(document.getElementById('copyCount').innerText);
+            let newCopyCount = copyCountContainer + 1;
+            document.getElementById('copyCount').innerText = newCopyCount;
+            let parentDiv = CopyButton.closest('.card');
+            let CallingNumber = parentDiv.querySelector('.callingNumber').innerText;
+            navigator.clipboard.writeText(CallingNumber)
+                try{
+                    await navigator.clipboard.writeText(CallingNumber);
+                    alert('Copied the number: ' + CallingNumber);
+
+                }catch(err){
+                    alert('Failed to copy the text: ', err);
+                }
+        });
+    }
+
+// CALL FUNCTION
+    let callButtons = document.querySelectorAll('.callButton');
+    for(let callButton of callButtons){
+        callButton.addEventListener('click', function(){
+           let parentDiv = callButton.closest('.card');
+           let findHeader = parentDiv.querySelector('.callingHeader').innerText;
+           let CallingNumber = parentDiv.querySelector('.callingNumber').innerText;
+           alert('Calling to...... ' + findHeader +" "+ "("+CallingNumber+")");
+           let coinNumber = parseInt(document.getElementById('Coins').innerText);
+           if(coinNumber < 20){
+            alert('Insufficient Balance! Please Recharge Your Account. You need at least 20 coins to make a call.');
+            return;
+           }
+           let newCoinNumber = coinNumber-20;
+           document.getElementById('Coins').innerText = newCoinNumber;
+           
+
+           let callHistoryData = {
+            name: findHeader,
+            number: CallingNumber,
+            time: new Date().toLocaleString()
+           }
+           CallHistory.push(callHistoryData);
+
+           let callContainer = document.getElementById('callHistoryContainer');
+           
+                let div= document.createElement('div'); 
+                div.innerHTML = `
+                <div id="" class="flex justify-between items-center bg-[#fafafa] px-3 py-2 rounded-lg mt-3">
+                        <div>
+                            <h1>${callHistoryData.name}}</h1>
+                            <p>${callHistoryData.number}</p>
+                        </div>
+                        <div>
+                            <p>${callHistoryData.time}</p>
+                        </div>
+                    </div>
+                `;
+                
+            
+            callContainer.appendChild(div);
+           
+        })
+
+         document.getElementById('clear').addEventListener('click', function(){
+            callHistory = [];
+            document.getElementById('callHistoryContainer').innerHTML = '';
+         })
+
+    
+}
+</script>
 </body>
 </html>
